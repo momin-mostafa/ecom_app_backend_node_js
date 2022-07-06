@@ -1,6 +1,6 @@
-const { request } = require('express');
-
 const router = require('express').Router();
+
+
 
 router.get("/usertest", (request, response) => {
     response.send('user test get');
@@ -20,4 +20,6 @@ router.post("/userpost", (request, response) => {
 })
 
 
+
 module.exports = router;
+
