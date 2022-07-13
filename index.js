@@ -1,7 +1,8 @@
 const express = require("express");
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const userRouter = require('./routes/users')
+const userRouter = require('./routes/users');
+const authRouter = require("./routes/auth");
 
 const app = express();
 dotenv.config();
@@ -15,6 +16,7 @@ mongoose
 
 
 app.use(express.json());
+app.use("/api/user", authRouter);
 app.use("/api/users", userRouter);
 
 
